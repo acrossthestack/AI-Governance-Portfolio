@@ -1,4 +1,4 @@
-#Platform Overview: Snowflake Cortex
+## Platform Overview: Snowflake Cortex
 
 | | |
 |---|---|
