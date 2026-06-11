@@ -4,7 +4,7 @@
 |---|---|
 | **Platform** | Snowflake Cortex (Snowflake AI Data Cloud) |
 | **Assessment Type** | AI Platform Risk Assessment (pre-approval) |
-| **Related Document** | [Platform Assessment: Snowflake Cortex](../01-Platform-Assessments/snowflake-cortex.md) |
+| **Related Document** | [Platform Assessment: Snowflake Cortex](../01-Platform-Assessments/Snowflake-Cortex.md) |
 | **Prepared by** | Michaella Njuakom, AI Governance Lead |
 | **Date** | June 2026 |
 | **Status** | Draft — for risk review board |
