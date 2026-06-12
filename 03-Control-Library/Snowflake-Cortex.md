@@ -1,6 +1,6 @@
 # Control Library: Snowflake Cortex
 
-|                     |                                                                                                                                     |
+                                                                                                                                    
 |---------------------|-------------------------------------------------------------------------------------------------------------------------------------|
 |**Platform**         |Snowflake Cortex (Snowflake AI Data Cloud)                                                                                           |
 |**Document Type**    |AI Platform Control Library                                                                                                          |
