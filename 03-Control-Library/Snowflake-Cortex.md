@@ -1,6 +1,6 @@
 # Control Library: Snowflake Cortex
 
-                                                                                                                                    
+|                     |                                                                                                                                     |
 |---------------------|-------------------------------------------------------------------------------------------------------------------------------------|
 |**Platform**         |Snowflake Cortex (Snowflake AI Data Cloud)                                                                                           |
 |**Document Type**    |AI Platform Control Library                                                                                                          |
@@ -210,4 +210,4 @@ This library is reviewed quarterly by the AI Governance Lead and upon material p
 
 -----
 
-*Prepared as part of the AI Governance Portfolio. Control statements follow a standard formula: who implements, how it works, when it occurs, who reviews, and what evidence demonstrates operation.*
+*Prepared as part of the AI Governance Portfolio.*
