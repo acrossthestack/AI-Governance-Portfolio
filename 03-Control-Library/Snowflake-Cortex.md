@@ -54,7 +54,7 @@ Each control is documented with: category, control type (Preventive / Detective)
 |SNOWC-18|AI Use-Case Intake and Risk Classification            |Responsible AI   |Preventive|3.3 Compliance                        |
 |SNOWC-19|AI Incident Response Plan                             |Incident Response|Corrective|3.8 Reputational / 3.6 Human Oversight|
 
-**Total: 19 controls** across eight categories.
+**Total: 19 controls** 
 
 -----
 
