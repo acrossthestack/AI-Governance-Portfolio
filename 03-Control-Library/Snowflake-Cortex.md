@@ -56,6 +56,7 @@ Each control is documented with: category, control type (Preventive / Detective)
 Traditional control IDs are internal identifiers and do not correspond to NIST 800-53 control numbers; official NIST mappings are stated separately on each control.
 
 Each control is documented with: category, control type (Preventive / Detective), the risk it mitigates (cross-referenced to the Risk Assessment), a NIST SP 800-53 Rev. 5 mapping where applicable, and a standardised implementation statement covering **who** implements it, **how** it works, **when** it occurs, **who** reviews results, and **what** evidence demonstrates operation.
+
 ---
 
 ## 4. Traditional Controls
