@@ -22,6 +22,8 @@ Two ID schemes are used:
 
 Each control is documented with: category, control type (Preventive / Detective), the risk it mitigates (cross-referenced to the Risk Assessment), a NIST SP 800-53 Rev. 5 mapping where applicable, and a standardised implementation statement covering **who** implements it, **how** it works, **when** it occurs, **who** reviews results, and **what** evidence demonstrates operation.
 
+## 3. Control Summary
+
 ### AI-specific controls
 
 | ID | Control Name | Category | Type | Mitigates Risk |
