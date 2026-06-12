@@ -21,19 +21,6 @@ Two ID schemes are used:
 | **SNOWC-** | AI-specific controls for Snowflake Cortex | SNOWC-01 |
 
 Each control is documented with: category, control type (Preventive / Detective), the risk it mitigates (cross-referenced to the Risk Assessment), a NIST SP 800-53 Rev. 5 mapping where applicable, and a standardised implementation statement covering **who** implements it, **how** it works, **when** it occurs, **who** reviews results, and **what** evidence demonstrates operation.
-### Traditional controls
-
-| ID | Control Name | Category | Type | Mitigates Risk |
-|---|---|---|---|---|
-| AC-01 | Role-Based Entitlement to AI Functions | Access Control | Preventive | 3.1 Security |
-| AC-02 | Privileged AI Role Access Review | Access Control | Detective | 3.1 Security |
-| DP-01 | PII Masking Before AI Processing | Data Protection | Preventive | 3.2 Privacy |
-| DP-02 | Data Classification Gate for AI Enablement | Data Protection | Preventive | 3.5 Data Protection |
-| MON-01 | AI Consumption Budgets and Resource Monitors | Monitoring | Detective | 3.7 Operational |
-| MON-02 | AI Usage Anomaly and Shadow-Adoption Monitoring | Monitoring | Detective | 3.1 Security / 3.7 Operational |
-| LOG-01 | AI Interaction Audit Logging | Logging | Detective | 3.1 Security / 3.3 Compliance |
-| TPR-01 | Vendor and Model Terms Review | Third Party Risk | Preventive | 3.4 Third-Party / Vendor |
-| TPR-02 | Vendor Change and Deprecation Monitoring | Third Party Risk | Detective | 3.4 Third-Party / Vendor |
 
 ### AI-specific controls
 
