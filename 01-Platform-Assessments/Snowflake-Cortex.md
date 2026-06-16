@@ -36,7 +36,7 @@ In short: Cortex converts an organisation's existing Snowflake estate from a dat
 
 ---
 
-## 3. What Does It Do? (Core Capabilities)
+## 3. Core Capabilities
 
 | Capability | What it does | Typical interface |
 |---|---|---|
@@ -52,7 +52,7 @@ In short: Cortex converts an organisation's existing Snowflake estate from a dat
 
 ---
 
-## 4. Who Would Use It? (Intended Users)
+## 4. Intended Users
 
 | User group | How they use Cortex |
 |---|---|
@@ -67,7 +67,7 @@ A governance-relevant observation: Cortex deliberately **broadens the population
 
 ---
 
-## 5. What Business Problem Does It Solve?
+## 5. Business Use Cases
 
 1. **AI without the integration tax.** Traditionally, enterprise AI requires moving data to external services, managing API keys and vendors, and building security and compliance controls around each integration. Cortex eliminates much of this by running AI where the data already lives, under existing governance.
 
