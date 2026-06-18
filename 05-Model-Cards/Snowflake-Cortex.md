@@ -76,15 +76,22 @@ Cortex must **not** be used for:
 
 ## 9. Key Risks
 
-Summarised from the [Risk Assessment](../02-Risk-Assessments/Snowflake-Cortex.md):
+The [Risk Assessment](../02-Risk-Assessments/Snowflake-Cortex.md) assesses 20 event-level risks (R-01 to R-20). This section highlights the most significant for the approval decision; the Risk ID column cross-references the full assessment, and each risk is addressed by one or more controls in Section 10.
 
-- **Inadequate human oversight (highest-rated risk).** Cortex puts AI in non-technical hands and enables autonomous agent actions; users may over-trust outputs and agents may act without review.
-- **Unauthorised access / data leakage.** Cortex is enabled for all users by default (granted to PUBLIC) until restricted; AI functions and integrations expand the paths by which data could be accessed or exfiltrated.
-- **Privacy and regulatory non-compliance.** Personal data may be processed without lawful basis; use cases may fall under the EU AI Act without classification.
-- **Boundary erosion via integrations.** Teams, Slack, and MCP connectors move data and actions beyond Snowflake's governed perimeter, under third-party terms.
-- **Hallucinated / unreliable outputs.** Generated SQL, summaries, and answers may be inaccurate, risking poor decisions.
-- **Third-party / model supply-chain risk.** Dependence on Snowflake and multiple foundation-model providers whose terms and availability can change.
-- **Uncontrolled cost and shadow usage.** Consumption-based billing and self-service access can lead to unbudgeted spend and ungoverned use.
+| Risk ID | Risk | Description | Domain |
+|---|---|---|---|
+| R-01 | **Unauthorised access** | Cortex is enabled for all users by default (granted to the PUBLIC role) until explicitly restricted; over-broad roles can reach sensitive data through AI functions and interfaces. | Security |
+| R-02 | **Data leakage / exfiltration** | Sensitive data exposed through AI outputs, embedded in search indexes or fine-tuned models, or transmitted outside the Snowflake boundary via Teams, Slack, and MCP connectors. | Security / Data Protection |
+| R-14 | **Hallucinated / inaccurate outputs** | Incorrect SQL from Cortex Analyst or fabricated answers from LLM functions drive poor business decisions if relied upon without verification. | Human Oversight |
+| R-16 | **Bias in outputs** | Foundation models or semantic models produce skewed or unfair results, with particular impact on any output informing decisions about individuals. | Human Oversight |
+| R-15 | **Inadequate human oversight (highest-rated)** | Agents take consequential actions (write actions, communications) without human review; accountability for AI-assisted decisions is unclear. | Human Oversight |
+| R-03 | **Prompt injection** | Malicious instructions embedded in ingested documents or data manipulate LLM or agent behaviour — a novel attack vector traditional controls do not address. | Security |
+| R-05, R-07 | **Regulatory non-compliance** | Use cases reach production without EU AI Act classification; personal data processed without a lawful basis or DPIA. | Compliance / Privacy |
+| R-09, R-10 | **Third-party / supply-chain disruption** | Model deprecation, behaviour or terms changes by Snowflake or a foundation-model provider disrupt workloads or alter data handling. | Third-Party / Vendor |
+| R-13 | **Data-residency breach** | Model processing may occur in a region that conflicts with UK/EU GDPR or contractual residency obligations. | Data Protection |
+| R-17, R-18 | **Uncontrolled cost / shadow usage** | Consumption-based billing scales unexpectedly; self-service access enables ungoverned ("shadow") AI use outside oversight. | Operational |
+
+**Most significant risk:** inadequate human oversight, rated Critical in the Risk Assessment — a direct consequence of the platform's core design (AI for non-technical users, autonomous agents). A recurring theme across the access, leakage, and disruption risks is the **Snowflake boundary**: exposure is materially lower for in-platform capabilities and concentrates where data or actions cross into external systems.
 
 ## 10. Required Controls
 
@@ -108,7 +115,7 @@ The full set of 19 controls (SNOWC-01 to SNOWC-19) applies; the above are the ga
 
 - **Consequential agent actions require human approval.** Any write action to an external system, any customer-facing communication, and any action affecting financial or personal data must be routed to a named approver; agents operate in draft-and-propose mode for these actions (SNOWC-14).
 - **AI-assisted decisions remain human-owned.** The human user is accountable for decisions made with AI assistance; AI outputs are decision support, not decision authority.
-- **Outputs requiring review:** generated SQL and analytical answers used for business decisions; agent-generated responses with external citations; any output informing decisions about individuals.
+- **Outputs requiring review:** generated SQL and analytical answers used for business decisions; agent-generated responses with external citations; any output informing decisions about individuals, which should additionally be checked for bias or unfair skew.
 - **Decisions that must never be fully automated:** customer-facing determinations, actions on personal or financial data, and any decision with legal or material effect on an individual.
 - **Semantic models** must be validated for accuracy before release to business users (SNOWC-15).
 
