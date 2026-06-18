@@ -25,7 +25,7 @@ Each control is documented with: category, control type (Preventive / Detective)
 
 ## 3. Control Summary
 
-### Traditional controls (SNOWC-01 – SNOWC-09)
+### Traditional controls 
 
 | ID | Control Name | Category | Type | Mitigates (Risk ID) |
 |---|---|---|---|---|
@@ -39,7 +39,7 @@ Each control is documented with: category, control type (Preventive / Detective)
 | SNOWC-08 | Vendor and Model Terms Review | Third Party Risk | Preventive | R-10 |
 | SNOWC-09 | Vendor Change and Deprecation Monitoring | Third Party Risk | Detective | R-09 |
 
-### AI-specific controls (SNOWC-10 – SNOWC-19)
+### AI-specific controls 
 
 | ID | Control Name | Category | Type | Mitigates (Risk ID) |
 |---|---|---|---|---|
@@ -191,4 +191,4 @@ This library is reviewed quarterly by the AI Governance Lead and upon material p
 
 ---
 
-*Prepared as part of the AI Governance Portfolio. Control statements follow a standard formula: who implements, how it works, when it occurs, who reviews, and what evidence demonstrates operation.*
+*Prepared as part of the AI Governance Portfolio.
